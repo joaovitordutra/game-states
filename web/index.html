@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jogo dos Estados e Capitais</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2kJ6gqXg0V9m3t3Y1h6D2jM0vH0T6v6q3u3gZ+0=" crossorigin="" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Jogo: Estados e Capitais do Brasil</h1>
+      <p class="subtitle">Responda a capital de cada estado. 3 tentativas — 5/3/1 pontos.</p>
+    </header>
+
+    <main>
+      <section id="game" class="card">
+        <div id="status" class="status">Carregando...</div>
+
+        <div id="question" class="question">--</div>
+
+        <div id="map-wrap">
+          <div id="map" aria-hidden="true"></div>
+        </div>
+
+        <div class="controls">
+          <input id="answer" type="text" placeholder="Digite a capital" autocomplete="off" />
+          <button id="submit">Responder</button>
+        </div>
+
+        <div class="meta">
+          <span id="attempts">Tentativas: 0</span>
+          <span id="score">Pontos: 0</span>
+          <span id="progress">0 / 0</span>
+        </div>
+
+        <div class="actions">
+          <button id="next" class="secondary" disabled>Próxima pergunta</button>
+          <button id="quit" class="secondary">Parar e ver resultado</button>
+        </div>
+      </section>
+
+      <section id="summary" class="card hidden">
+        <h2>Resumo</h2>
+        <p id="summary-text"></p>
+        <button id="restart">Jogar novamente</button>
+      </section>
+    </main>
+
+    <footer>
+      <small>Layout simples — sem backend. Perguntas embaralhadas localmente.</small>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j8k3m7z1fBf5g3y8Q0s6Q8v5y6y9j1v4+Q7r3tI=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

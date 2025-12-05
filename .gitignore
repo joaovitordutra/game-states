@@ -1,0 +1,26 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Editor/IDE
+.vscode/
+*.swp
+
+# Logs and temporary
+*.log
+/tmp/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# GeoJSON large file (if you prefer not to track)
+# web/brazil-states.geojson
